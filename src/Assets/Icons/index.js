@@ -1,0 +1,12 @@
+export { default as ChatIcon } from './ChatIcon';
+export { default as CrownIcon } from './CrownIcon';
+export { default as FolderIcon } from './FolderIcon';
+export { default as MainIcon } from './MainIcon';
+export { default as MoonIcon } from './MoonIcon';
+export { default as PlusIcon } from './PlusIcon';
+export { default as SearchIcon } from './SearchIcon';
+export { default as SettingIcon } from './SettingIcon';
+export { default as TrashIcon } from './TrashIcon';
+export { default as PaperIcon } from './PaperIcon';
+export { default as SendIcon } from './SendIcon';
+export { default as PencilIcon } from './PencilIcon';

@@ -1,0 +1,303 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+}
+
+html,
+body,
+#root {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+}
+
+/*---------------------------*/
+/*-----SIDEBAR & ICONS-------*/
+/*---------------------------*/
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  width: 90px;
+}
+
+.sidebar-icons {
+  flex: 1;
+}
+
+.sidebar-icons, 
+.sidebar-icons_profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sidebar-icons-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.container-icon {
+  width: 48px;
+  height: 48px;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .3s ease-in-out;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.container-icon:hover{
+  background-color: hsl(229, 59%, 94%);
+}
+
+/*---------------------------*/
+/*----ASIDE CONVERSATIONS----*/
+/*---------------------------*/
+
+.aside {
+  width: 340px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aside-search {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aside-search label {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.aside-search input {
+  padding: .85rem;
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid hsl(200, 12%, 95%, 1);
+  background-color: hsl(210, 17%, 98%);
+  outline: none;
+  font-size: 16px;
+  
+  &::placeholder{
+    color: hsla(210, 6%, 63%, 1);
+  }
+}
+
+.aside-search input:focus{
+  border: 1px solid hsl(137, 52%, 39%);
+}
+
+.aside-search label svg{
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.aside-search button {
+  padding: 1rem;
+  width: 100%;
+  background-color: hsl(137, 52%, 39%);
+  border-radius: .5rem;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color .3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.aside-search button:hover{
+  background-color: hsl(137, 52%, 42%);
+}
+
+.aside-conversations {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  overflow-y: auto;
+}
+
+/*---------------------------*/
+/*----CARD CONVERSATIONS-----*/
+/*---------------------------*/
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  gap: .5rem;
+  max-height: 90px;
+  transition: background-color .3s ease-in-out;
+}
+
+.card:hover {
+  background-color: hsl(102, 59%, 94%);
+}
+
+.card.selected{
+  border: 1px solid hsl(137, 100%, 82%, 1);
+  background-color: hsl(102, 59%, 94%);
+}
+
+.card-description {
+  font-size: 14px;
+  color: hsl(210, 6%, 63%, 1);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita a 2 líneas */
+  -webkit-box-orient: vertical;
+  white-space: normal; /* Permite múltiples líneas */
+}
+
+/*---------------------------*/
+/*----HEADER-CONVERSATION----*/
+/*---------------------------*/
+
+main {
+  background-color: hsl(210, 17%, 98%);
+  flex: 1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.header-conversation {
+  padding: 1.5rem;
+}
+
+.header-conversation-nav {
+  display: flex;
+}
+
+.header-nav-title {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.header-nav-icons {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/*---------------------------*/
+/*----MESSAGES-CONTAINER-----*/
+/*---------------------------*/
+
+.container-messages {
+  padding: 1.5rem;
+  background-color: hsl(210, 17%, 98%);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 1rem;
+  background-color: purple;
+  display: flex;
+  gap: 1rem;
+  border-radius: .5rem;
+  align-items: flex-start;
+}
+
+.message.user {
+  color: #30994D;
+  background-color: hsl(90, 100%, 98%);
+}
+
+.message.bot {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: hsl(0, 0%, 100%);
+}
+
+/*---------------------------*/
+/*----FORM SEND MESSAGES-----*/
+/*---------------------------*/
+
+.form-conversation {
+  padding: 1.5rem;
+}
+
+.form-conversation label {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+
+.form-conversation label input {
+  padding: 1rem 3rem;
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid hsl(200, 12%, 95%, 1);
+  outline: none;
+  font-size: 16px;
+}
+
+.form-conversation label input:focus {
+  border: 1px solid hsl(137, 52%, 39%);
+}
+
+.form-conversation label button {
+  position: absolute;
+  top: 50%;
+  right: 1px;
+  border-radius: .5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  height: 95%;
+  border: none;
+  width: 120px;
+  color: #30994D;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: background-color .3s ease-in-out;
+  gap: .5rem;
+}
+
+.form-conversation label button:hover {
+  background-color: hsl(229, 59%, 94%);
+}
+
+.pencilIcon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+/*---------------------------*/
+/*---------------------------*/
+/*---------------------------*/
