@@ -4,6 +4,8 @@ import Aside from "./Components/Aside";
 
 function App() { 
 
+  console.log("Hello")
+
   return (
     <>
       <SideBar/>
