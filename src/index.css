@@ -56,7 +56,7 @@ body,
 }
 
 .container-icon:hover{
-  background-color: hsl(229, 59%, 94%);
+  background-color: hsl(102, 59%, 94%);
 }
 
 /*---------------------------*/
@@ -133,6 +133,19 @@ body,
 .aside-conversations {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.p-title-conversations {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9AA0A6;
+}
+
+.aside-conversations-list {
+  display: flex;
+  flex-direction: column;
   gap: .5rem;
   overflow-y: auto;
 }
@@ -196,7 +209,7 @@ main {
 .header-nav-title {
   flex: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -222,11 +235,11 @@ main {
 
 .message {
   padding: 1rem;
-  background-color: purple;
   display: flex;
   gap: 1rem;
   border-radius: .5rem;
   align-items: flex-start;
+  line-height: 1.4;
 }
 
 .message.user {
@@ -288,7 +301,7 @@ main {
 }
 
 .form-conversation label button:hover {
-  background-color: hsl(229, 59%, 94%);
+  background-color: hsl(102, 59%, 94%);
 }
 
 .pencilIcon {
