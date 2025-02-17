@@ -2,15 +2,15 @@ import { SearchIcon, ChatIcon, TrashIcon, PaperIcon, FolderIcon } from '../Asset
 
 function HeaderConversation() {
   return (
-    <header className='header-conversation'>
-        <div className='header-conversation-nav'>
+    <header className='conversation-header'>
+        <div className='conversation-header__nav'>
 
-            <div className="header-nav-title">
+            <div className="conversation-header__title">
                 <ChatIcon/>
                 <p>Explore the Universe</p>
             </div>
 
-            <div className="header-nav-icons">
+            <div className="conversation-header__icons">
                 <SearchIcon/>
                 <FolderIcon/>
                 <PaperIcon/>

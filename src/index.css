@@ -64,7 +64,7 @@ body,
 /*---------------------------*/
 
 .aside {
-  width: 340px;
+  width: 330px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -196,24 +196,25 @@ main {
   display: flex;
   position: relative;
   flex-direction: column;
+  height: 100%;
 }
 
-.header-conversation {
+.conversation-header {
   padding: 1.5rem;
 }
 
-.header-conversation-nav {
+.conversation-header__nav {
   display: flex;
 }
 
-.header-nav-title {
+.conversation-header__title {
   flex: 1;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.header-nav-icons {
+.conversation-header__icons {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
@@ -223,34 +224,64 @@ main {
 /*----MESSAGES-CONTAINER-----*/
 /*---------------------------*/
 
-.container-messages {
-  padding: 1.5rem;
+.messages {
   background-color: hsl(210, 17%, 98%);
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   overflow-y: auto;
+  width: 100%;
 }
 
-.message {
-  padding: 1rem;
-  display: flex;
-  gap: 1rem;
-  border-radius: .5rem;
-  align-items: flex-start;
+.messages__item {
+  width: 100%;
+}
+
+.messages__wrapper {
+  margin: auto;
   line-height: 1.4;
 }
 
-.message.user {
-  color: #30994D;
-  background-color: hsl(90, 100%, 98%);
+.messages__inner {
+  display: flex;
+  max-width: 50rem;
+  margin: auto;
 }
 
-.message.bot {
-  font-size: 16px;
-  font-weight: 400;
+.messages__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 0.5rem;
+  min-width: 0;
+  position: relative;
+}
+
+.messages__bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.messages__bubble--user {
+  justify-content: flex-end;
+}
+
+.messages__bubble--bot {
+  justify-content: flex-start;
+}
+
+.messages__bubble-content {
+  border-radius: 1.5rem;
+  padding: 1rem;
   background-color: hsl(0, 0%, 100%);
+}
+
+.messages__bubble-content--user {
+  color: #30994D;
+  max-width: 70%;
+  background-color: hsl(90, 100%, 98%);
 }
 
 /*---------------------------*/
